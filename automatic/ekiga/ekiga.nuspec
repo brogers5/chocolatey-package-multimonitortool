@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Ekiga</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Damien Sandras</authors>
+    <owners>dtgm</owners>
+    <summary>Open source SoftPhone (VoIP), Video Conferencing and Instant Messenger</summary>
+    <description>
+Ekiga (formely known as GnomeMeeting) is an open source SoftPhone, Video Conferencing and Instant Messenger application over the Internet.
+
+It supports HD sound quality and video up to DVD size and quality.
+
+It is interoperable with many other standard compliant softwares, hardwares and service providers as it uses both the major telephony standards (SIP and H.323).
+    </description>
+    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/_output/{{PackageName}}/{{PackageVersion}}</packageSourceUrl>
+    <projectUrl>http://ekiga.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/269e4311cd8b524c71dbfb2a49237c3ed68929f9/icons/{{PackageName}}.svg</iconUrl>
+    <tags>voip sip video-conference instant-messaging chat</tags>
+    <copyright>© Damien Sandras</copyright>
+    <licenseUrl>http://wiki.ekiga.org/index.php/Manual#License</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>https://git.gnome.org/browse/ekiga/plain/NEWS</releaseNotes>
+    <dependencies>
+      <dependency id="gtk-runtime" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
