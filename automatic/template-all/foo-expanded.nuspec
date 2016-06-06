@@ -2,12 +2,13 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>{{PackageName}}</id>
-    <title></title>
+    <title>py2exe</title>
     <version>{{PackageVersion}}</version>
-    <authors></authors>
+    <authors>Thomas Heller</authors>
     <owners>dtgm</owners>
-    <summary></summary>
+    <summary>Build standalone executables for Windows</summary>
     <description>
+py2exe is a distutils extension to build standalone Windows executable programs from Python scripts.
 
 #### Documentation
 * [Features]()
@@ -15,31 +16,32 @@
 * [FAQ]()
 * [Wiki]()
 * [Manual]()
-* [Privacy Policy]()
+* [Privacy policy]()
 
 #### Community
 * [Forum]()
+* IRC: channel [#py2exe](irc://irc.freenode.net/py2exe) at Freenode.net
 * [Facebook]()
 * [Google+]()
 * [Twitter]()
     </description>
-    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/_output/{{PackageName}}/{{PackageVersion}}</packageSourceUrl>
-    <projectUrl></projectUrl>
-    <projectSourceUrl></projectSourceUrl>
-    <bugTrackerUrl></bugTrackerUrl>
+    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/{{PackageName}}/</packageSourceUrl>
+    <projectUrl>http://www.py2exe.org/</projectUrl>
+    <projectSourceUrl>http://sourceforge.net/p/py2exe/svn/</projectSourceUrl>
+    <bugTrackerUrl>http://sourceforge.net/p/py2exe/bugs/</bugTrackerUrl>
     <docsUrl></docsUrl>
-    <mailingListUrl></mailingListUrl>
-    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages//icons/{{PackageName}}.png</iconUrl>
+    <mailingListUrl>http://sourceforge.net/p/py2exe/mailman/</mailingListUrl>
+    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/408ded4dd91e2df4543abc86857677fb7e10c0d3/icons/{{PackageName}}.png</iconUrl>
     <tags></tags>
     <copyright>© </copyright>
-    <licenseUrl></licenseUrl>
+    <licenseUrl>https://wikipedia.org/wiki/Freeware</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>
 #### Program
 * [News]()
 * [Release log]()
 * [Roadmap]()
-* [Changelog]()
+* [Changelog](http://www.py2exe.org/index.cgi/News)
 
 #### Package
 * Automatically built and uploaded by [dtgm](https://chocolatey.org/profiles/dtgm)
