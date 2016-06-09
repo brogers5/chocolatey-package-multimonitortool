@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>{{PackageName}}</id>
     <title>MongoDB</title>
@@ -12,26 +12,32 @@ MongoDB (from "humongous") is a scalable, high-performance, open source NoSQL da
 
 MongoDB stores data using a flexible document data model that is similar to JSON. Documents contain one or more fields, including arrays, binary data and sub-documents. Fields can vary from document to document. This flexibility allows development teams to evolve the data model rapidly as their application requirements change.
 
-Developers access documents through rich, idiomatic drivers available in all popular programming languages. Documents map naturally to the objects in modern languages, which allows developers to be extremely productive. Typically, there’s no need for an ORM layer.]()
-
-[Get involved](http://www.mongodb.org/get-involved)
+Developers access documents through rich, idiomatic drivers available in all popular programming languages. Documents map naturally to the objects in modern languages, which allows developers to be extremely productive. Typically, there’s no need for an ORM layer.
     </description>
-    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/_output/{{PackageName}}/{{PackageVersion}}</packageSourceUrl>
+    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/{{PackageName}}</packageSourceUrl>
     <projectUrl>http://www.mongodb.org/</projectUrl>
-    <packageSourceUrl>http://www.mongodb.org/about/source-code/</packageSourceUrl>
+    <projectSourceUrl>http://www.mongodb.org/about/source-code/</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/mongodb/mongo/wiki/Submit-Bug-Reports</bugTrackerUrl>
     <docsUrl>http://docs.mongodb.org/</docsUrl>
+    <mailingListUrl>https://groups.google.com/forum/#!forum/mongodb-user</mailingListUrl>
     <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/8f7101024b11677be45a74b45114000b428a9c9b/icons/{{PackageName}}.png</iconUrl>
-    <tags>database nosql</tags>
+    <tags>cli database nosql admin</tags>
     <copyright>© 2011 MongoDB Inc</copyright>
     <licenseUrl>http://www.mongodb.org/display/DOCS/Licensing</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>
 #### Program
 * [Changelog](http://docs.mongodb.org/manual/release-notes/)
+* [Alerts](https://www.mongodb.com/alerts)
 
 #### Package
-* This package installs MongoDB as a Windows service and binds to localhost. Type mongo at a command prompt to use the interactive, administrative shell. A batch script, MongoRotateLogs.bat, is included for convenient log rotation.
 * Automatically built and uploaded by [dtgm](https://chocolatey.org/profiles/dtgm)
     </releaseNotes>
+    <dependencies>
+      <dependency id="{{PackageName}}.install" version="[{{PackageVersion}}]" />
+    </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
 </package>

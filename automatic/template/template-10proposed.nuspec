@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- NOTE
+These proposed changes are with auto-updating as focus. That is, a program using automated means to populate fields. As of March 2016, only about half of all packages are auto-updated and some maintainers do not have dedicated build machines so packages released may not concur with program releases. Many suggestions proposed here are expecting dedicated build machines to constantly be running. Information is populated from either author's published data or extracted metadata of published executable.
+-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <version>{{PackageVersion}}</version>
+    <owners>{{MaintainerName}}</owners>
+    <title>STATIC</title>
+    <authors>STATIC</authors>
+    <summary>STATIC</summary>
+    <description>
+<!-- 4000 chars -->
+STATIC
+
+#### Additional documentation
+* [Features]()
+* [Screenshots]()
+* [FAQ]()
+* [Wiki]()
+* [Manual]()
+* [Privacy policy]()
+
+#### Community
+* [Forum]()
+* [IRC]()
+* [Facebook]()
+* [Google+]()
+* [Twitter]()
+
+
+#### Install behavior
+* Start menu shortcuts: 
+* Desktop icons: 
+* Paths added: 
+* Install path: 
+
+* registry entries:
+
+
+#### Package parameters
+Available: 
+
+Create
+  start menu shortcut
+  desktop icon
+  environment path
+
+#### Installer parameters
+<!-- either this would be done manually, or optimally, auto-detected, but that would require heuristic analysis -->
+Installer framework: **install.metadata**
+Typical arguments available: **install.metadata**
+Default arguments passed to installer: **{{SilentArgs}}**
+
+add to `choco install` command:
+
+* to append to "default": `--ia`, `--install-arguments` `'INSTALL ARGS'`
+* to replace "default": `-o`, `--override-arguments`
+
+    </description>
+    <!-- short packageSourceUrl -->
+    <packageSourceUrl>{{MaintainerRepo}}</packageSourceUrl>
+    <!-- long packageSourceUrl -->
+    <packageSourceUrl>{{MaintainerRepo}}/tree/master/automatic/_output/{{PackageName}}/{{PackageVersion}}</packageSourceUrl>
+
+<!-- these could be specified in ketarin, but it is unlikely for them to change so would be faster to hardcode these values -->
+    <projectUrl>MANUAL</projectUrl>
+    <projectSourceUrl>MANUAL</projectSourceUrl>
+    <bugTrackerUrl>MANUAL</bugTrackerUrl>
+    <docsUrl>MANUAL</docsUrl>
+    <mailingListUrl>MANUAL</mailingListUrl>
+<!-- if freeware and no other URL available should be https://wikipedia.org/wiki/Freeware -->
+    <licenseUrl>MANUAL</licenseUrl>
+    <tags>MANUAL</tags>
+<!-- when should this be true? -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+<!-- some way to automate this value? 
+       URL must include commit or icon cannot change 
+       could consolidate all current package icons -->
+    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/COMMIT-SHA1/icons/{{PackageName}}.png</iconUrl>
+
+<!-- typically just append <authors> element after © symbol -->
+    <copyright>© </copyright>
+<!--
+  Notes about copyright according to USA copyright law: 
+    Copyright and Authors elements may differ.
+    Code in USA is considered free speech as ruled by Federal Supreme Court.
+    All software code written in USA is copyright by default unless specifically stated otherwise by the author.
+    This includes free and open source licenses which rely on copyright law to enforce the terms of those licenses.
+    If no copyright is expressly stated, the copyright still exists, it is simply unknown to you.
+    There is no specific format to copyright nomenclature. Typical nomenclature for actively developed software may be:
+    © 1999-2016 Jane
+    © initial_release_year-current_year Author
+    © (a circled capital letter "C") https://en.wikipedia.org/wiki/Copyright_symbol
+    Unicode: U+00A9 || U+24B8 || U+24D2
+    HTML: &#169; || &copy; || &#9426;
+-->
+    
+    <releaseNotes>
+#### Program
+* [News]()
+* [Release log]()
+* [Roadmap]()
+* [Changelog]()
+
+<!-- would require always-on build machine for accurate reporting -->
+<!--
+* Development activity:
+  Weekly    Constant  >=1 releases per 7 days
+  Monthly   Frequent  >=1 release per 30 days
+  Quarterly Moderate  >=1 release per 90 days
+  Yearly    Periodic  >=1 release per 180 days
+  
+  
+* Date of first release: 2005 (Use copyright date for initial program release)
+* Date of last release: 2016
+* Age of software: 11 years
+  
+If last release date > 2 years
+* Development state:
+  Active    <1 year since last release
+  Inactive  >1 year since last release
+  Dormant   >2 years since last release
+  Static    >3 years since last release
+  
+  
+* Frequency of releases in past 6 months
+* Avg release interval (days): (qty releases in last year) / 365
+-->
+
+#### System requirements
+* Download file name: **{url:basefile}.{url:ext}**
+* Download file size: **{filesize:formatfilesize}**
+* Default install name: **{???}**
+* Default install size: **{???}**
+
+Sys reqs can easily get more granular. Some of this data could be culled from existing sources. For example VirusTotal publishes file data and extracted data for tested files. To determine whether a file has already been tested, one only has to compute the file's SHA256.
+
+File's PE data
+https://www.virustotal.com/file/SHA256/analysis/#item-detail
+
+File's identifying signatures
+https://www.virustotal.com/file/SHA256/analysis/#additional-info
+
+File's actions when initialized
+https://www.virustotal.com/file/SHA256/analysis/#behavioural-info
+
+these are in addition to consolidated virus testing
+https://www.virustotal.com/file/SHA256/analysis/#analysis
+
+
+
+
+
+#### Package
+* __Automatically built__: if this package's version is out of date by more than a day of the program's version, please [notify the maintainer](https://chocolatey.org/packages/{{PackageName}}/ContactOwners)
+* Uploaded by [{{MaintainerName}}](https://chocolatey.org/profiles/{{MaintainerName}})
+* Program release date: {f:yyyy}{f:MM}{f:dd}-{f:HH}{f:mm}
+* Package release date: {f:yyyy}{f:MM}{f:dd}-{f:HH}{f:mm}
+* Package lag time: 
+    </releaseNotes>
+
+<!-- no defined syntax yet -->
+    <!--<provides>{{PackageName}}</provides>-->
+    <!--<replaces></replaces>-->
+    <!--<conflicts></conflicts>-->
+
+
+    
+<!-- POSSIBLE SYNTAX (typical) -->
+<!--
+    <provides>
+      <provided id="FOO" version="1.0.0" />
+    </provides>
+    
+    <provides>FOO,BAR,FOOBAR</provides>
+    
+    <provides>{{PackageName}}.install</provides>
+-->
+
+    
+<!-- POSSIBILE USAGE -->
+
+<!-- PROVIDES: support for Virtual Pkgs -->
+<!--
+    <provides>
+      <provided id="FOO" version="1.0.0" />
+    </provides>
+    
+    <provides>FOO,BAR,FOOBAR</provides>
+    
+    <provides>{{PackageName}}.install</provides>
+-->
+
+<!-- REPLACES: for deprecated pkgs -->
+<!--    
+    <replaces>
+      <replaced id="FOO" version="1.0.0" />
+    </replaces>
+-->
+
+<!-- CONFLICTS: cannot be installed alongside -->
+<!--
+    <conflicts>
+      <conflicted id="" version="" />
+    </conflicts>
+-->
+    
+    
+<!-- metapackage -->
+    <dependencies>
+      <dependency id="{{PackageName}}.install" version="[{{PackageVersion}}]" />
+    </dependencies>
+
+<!-- other program dependency: 3.0 < keepass ≥ 2.09 -->
+    <dependencies>
+      <dependency id="keepass" version="[2.09, 3.0)" />
+      <dependency id="jre" version="8" />
+    </dependencies>
+
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
