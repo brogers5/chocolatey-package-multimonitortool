@@ -1,31 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>multimonitortool</id>
+    <version>1.95</version>
     <title>MultiMonitorTool</title>
-    <version>{{PackageVersion}}</version>
     <authors>Nir Sofer</authors>
     <owners>dtgm</owners>
-    <summary>Enable/disable/configure multiple monitors</summary>
-    <description>
-MultiMonitorTool is a small tool that allows you to do some actions related to working with multiple monitors.
+    <licenseUrl>http://www.nirsoft.net/utils/multi_monitor_tool.html</licenseUrl>
+    <projectUrl>http://www.nirsoft.net/utils/multi_monitor_tool.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-multimonitortool@f92d7f6582ba2047f4b089a2ed5da97741c3163e/multimonitortool.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>MultiMonitorTool is a small tool that allows you to do some actions related to working with multiple monitors.
 
 With MultiMonitorTool, you can disable/enable monitors, set the primary monitor, save and load the configuration of all monitors, and move windows from one monitor
 to another. You can do these actions from the user interface or from command-line, without displaying user interface.
 
-MultiMonitorTool also provides a preview window, which allows you to watch a preview of every monitor on your system.
-    </description>
-    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/{{PackageName}}/</packageSourceUrl>
-    <projectUrl>http://www.nirsoft.net/utils/multi_monitor_tool.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/2697586f564894b3346352497da46f320a02e725/icons/multimonitortool.png</iconUrl>
-    <tags>multiple monitors</tags>
+MultiMonitorTool also provides a preview window, which allows you to watch a preview of every monitor on your system.</description>
+    <summary>Enable/disable/configure multiple monitors</summary>
+    <releaseNotes>#### Package
+* Automatically built and uploaded by [dtgm](https://chocolatey.org/profiles/dtgm)</releaseNotes>
     <copyright>© 2012 NirSoft</copyright>
-    <licenseUrl>http://www.nirsoft.net/utils/multi_monitor_tool.html</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>
-#### Package
-* Automatically built and uploaded by [dtgm](https://chocolatey.org/profiles/dtgm)
-    </releaseNotes>
+    <tags>multiple monitors</tags>
+    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/multimonitortool/</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
