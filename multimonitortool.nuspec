@@ -5,7 +5,7 @@
     <version>1.95</version>
     <title>MultiMonitorTool</title>
     <authors>Nir Sofer</authors>
-    <owners>dtgm</owners>
+    <owners>dtgm sublym0nal</owners>
     <licenseUrl>http://www.nirsoft.net/utils/multi_monitor_tool.html</licenseUrl>
     <projectUrl>http://www.nirsoft.net/utils/multi_monitor_tool.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-multimonitortool@f92d7f6582ba2047f4b089a2ed5da97741c3163e/multimonitortool.png</iconUrl>
@@ -17,11 +17,10 @@ to another. You can do these actions from the user interface or from command-lin
 
 MultiMonitorTool also provides a preview window, which allows you to watch a preview of every monitor on your system.</description>
     <summary>Enable/disable/configure multiple monitors</summary>
-    <releaseNotes>#### Package
-* Automatically built and uploaded by [dtgm](https://chocolatey.org/profiles/dtgm)</releaseNotes>
+    <releaseNotes>[Versions History](https://www.nirsoft.net/utils/control_my_monitor.html)</releaseNotes>
     <copyright>© 2012 NirSoft</copyright>
     <tags>multiple monitors</tags>
-    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/multimonitortool/</packageSourceUrl>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-multimonitortool</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
