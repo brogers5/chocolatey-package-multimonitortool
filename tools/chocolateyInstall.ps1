@@ -1,4 +1,6 @@
-﻿$packageName = 'multimonitortool'
+﻿$ErrorActionPreference = 'Stop'
+
+$packageName = 'multimonitortool'
 $url = 'http://www.nirsoft.net/utils/multimonitortool.zip'
 $checksum = '5c448b256a11c6e2280b05626ebe8cc9fa67307895d0121260e8b3f379b98fe2'
 $checksumType = 'sha256'
