@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>multimonitortool</id>
-    <version>1.95</version>
+    <version>1.96</version>
     <title>MultiMonitorTool</title>
     <authors>Nir Sofer</authors>
     <owners>dtgm sublym0nal</owners>
@@ -26,9 +26,9 @@ MultiMonitorTool also provides a preview window, which allows you to watch a pre
 ]]></description>
     <summary>Enable/disable/configure multiple monitors</summary>
     <releaseNotes>[Versions History](https://www.nirsoft.net/utils/control_my_monitor.html)</releaseNotes>
-    <copyright>© 2012 NirSoft</copyright>
+    <copyright>Copyright (c) 2012-2019 Nir Sofer</copyright>
     <tags>multiple monitors</tags>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-multimonitortool</packageSourceUrl>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-multimonitortool/tree/v1.96</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'multimonitortool'
-$url = 'http://www.nirsoft.net/utils/multimonitortool.zip'
-$checksum = '5c448b256a11c6e2280b05626ebe8cc9fa67307895d0121260e8b3f379b98fe2'
+$url = 'https://www.nirsoft.net/utils/multimonitortool.zip'
+$checksum = '400837d4e6cba4bf4e3292bfa74b245107cbe40f10c138be5dde67c5e1431ec5'
 $checksumType = 'sha256'
-$url64 = 'http://www.nirsoft.net/utils/multimonitortool-x64.zip'
-$checksum64 = '128949125987ba5264d7e99f6baa50d2c0a500e88c22c62101db0210da1cba4e'
+$url64 = 'https://www.nirsoft.net/utils/multimonitortool-x64.zip'
+$checksum64 = '2cf23f292ed38c946a8c7e1b904f89d3f6af9d3a5ecb43cef681bb07a3702715'
 $checksumType64 = 'sha256'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $installFile = Join-Path $toolsDir "$($packageName).exe"
