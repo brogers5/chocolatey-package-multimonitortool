@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
@@ -11,12 +11,19 @@
     <projectUrl>http://www.nirsoft.net/utils/multi_monitor_tool.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-multimonitortool@f92d7f6582ba2047f4b089a2ed5da97741c3163e/multimonitortool.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>MultiMonitorTool is a small tool that allows you to do some actions related to working with multiple monitors.
+    <description><![CDATA[
+---
+### [choco://multimonitortool](choco://multimonitortool)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
-With MultiMonitorTool, you can disable/enable monitors, set the primary monitor, save and load the configuration of all monitors, and move windows from one monitor
-to another. You can do these actions from the user interface or from command-line, without displaying user interface.
+---
 
-MultiMonitorTool also provides a preview window, which allows you to watch a preview of every monitor on your system.</description>
+MultiMonitorTool is a small tool that allows you to do some actions related to working with multiple monitors.
+
+With MultiMonitorTool, you can disable/enable monitors, set the primary monitor, save and load the configuration of all monitors, and move windows from one monitor to another. You can do these actions from the user interface or from command-line, without displaying user interface.
+
+MultiMonitorTool also provides a preview window, which allows you to watch a preview of every monitor on your system.
+]]></description>
     <summary>Enable/disable/configure multiple monitors</summary>
     <releaseNotes>[Versions History](https://www.nirsoft.net/utils/control_my_monitor.html)</releaseNotes>
     <copyright>© 2012 NirSoft</copyright>
