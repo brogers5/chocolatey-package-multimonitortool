@@ -31,8 +31,8 @@ function global:au_GetLatest {
     $version = [Version] [Regex]::Matches($page.Content, "<li>Version (.*):?").Groups[1].Value
 
     return @{ 
-        Url32 = 'http://www.nirsoft.net/utils/multimonitortool.zip'
-        Url64 = 'http://www.nirsoft.net/utils/multimonitortool-x64.zip'
+        Url32 = 'https://www.nirsoft.net/utils/multimonitortool.zip'
+        Url64 = 'https://www.nirsoft.net/utils/multimonitortool-x64.zip'
         Version = $version
         SoftwareVersion = $Version #This may change if building a package fix version
     }
