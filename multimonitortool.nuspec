@@ -27,7 +27,7 @@ MultiMonitorTool also provides a preview window, which allows you to watch a pre
     <summary>Enable/disable/configure multiple monitors</summary>
     <releaseNotes>[Versions History](https://www.nirsoft.net/utils/control_my_monitor.html)</releaseNotes>
     <copyright>Copyright (c) 2012-2019 Nir Sofer</copyright>
-    <tags>multiple monitors</tags>
+    <tags>multiple monitors freeware cli</tags>
     <packageSourceUrl>https://github.com/brogers5/chocolatey-package-multimonitortool/tree/v1.96</packageSourceUrl>
   </metadata>
   <files>
