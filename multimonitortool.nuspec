@@ -31,6 +31,12 @@ MultiMonitorTool also provides a preview window, which allows you to watch a pre
     <packageSourceUrl>https://github.com/brogers5/chocolatey-package-multimonitortool/tree/v1.96</packageSourceUrl>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools\chocolateybeforemodify.ps1" target="tools" />
+    <file src="tools\chocolateyinstall.ps1" target="tools" />
+    <file src="tools\chocolateyuninstall.ps1" target="tools" />
+    <file src="tools\multimonitortool.zip" target="tools" />
+    <file src="tools\multimonitortool-x64.zip" target="tools" />
+    <file src="tools\LICENSE.txt" target="tools" />
+    <file src="tools\VERIFICATION.txt" target="tools" />
   </files>
 </package>

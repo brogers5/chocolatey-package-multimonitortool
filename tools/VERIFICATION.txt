@@ -1,0 +1,54 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The packaged ZIP archive is sourced via the project's page on Nir Sofer's website.
+The project's page is located at the following URL:
+https://www.nirsoft.net/utils/multi_monitor_tool.html
+
+For convenience, the packaged archives were downloaded via the following URLs:
+https://www.nirsoft.net/utils/multimonitortool.zip
+https://www.nirsoft.net/utils/multimonitortool-x64.zip
+
+Nir Sofer also publishes official checksums for the packaged archives at the following URL:
+https://www.nirsoft.net/hash_check/?software=multimonitortool
+
+Note that the download URLs are not versioned, and that the checksums page only contains information
+for the latest available version. Therefore, these URLs will only be a valid reference source if
+the latest available version and packaged version are one and the same. A newly released version
+should be expected to invalidate a checksum verification for an older version when using these URLs.
+
+As a workaround, this package's creation process includes the creation of historical snapshots via
+the Internet Archive's Wayback Machine to create a permanent backup source.
+These snapshots can be accessed at the following URLs:
+
+Download (32-bit): https://web.archive.org/web/20230124022629/https://www.nirsoft.net/utils/multimonitortool.zip
+Download (64-bit): https://web.archive.org/web/20230124022650/https://www.nirsoft.net/utils/multimonitortool-x64.zip
+Checksums: https://web.archive.org/web/20230124022555/https://www.nirsoft.net/hash_check/?software=multimonitortool
+
+For convenience, the following checksums were published at the time of this package's creation:
+
+multimonitortool.zip
+MD5: fc414ecc38769a57f81f6d9fc57b4160
+SHA1: bed2ed10cd67a00d76e97f8f495a5dfcda20d8ec
+SHA256: d0c371440f1203feecf5422f72a5c07b088c4b0aa53b552cc02bfafbc95d795b
+SHA512: 51cdde7059e50f23de9039ab30c5cfcef215af96c41ee19567d9349c5a9026b3ab87c919ca7fe30d5d987e1308abb56c57094694477ce43059e53850f954760a
+
+multimonitortool-x64.zip
+MD5: 0028fe0f5c9663c5ba94e3df4c1e575c
+SHA1: 03ce3938f7eeb0411d148b8e2a760240d44e3609
+SHA256: a7c24eab537c49305f0a9ed6dbb0770f20ca8aaf480d27a6a3f405b9dfb93c78
+SHA512: 14419ab104740a8a4e9fbe102bd1edce060e502670a5dc3090f636d3e87e1e0ad2dea457a08e28a0d27b26631966a378aa65c994517b06920ded461916abf924
+
+Note that the MD5 and SHA1 hash algorithms are no longer considered secure by modern standards.
+For tamper protection, it's recommended to validate against either a SHA256 or SHA512 hash instead.
+
+The following PowerShell block will calculate and print a hash for each supported algorithm:
+
+    $hashAlgorithms = @('MD5', 'SHA1', 'SHA256', 'SHA512')
+    $hashAlgorithms | ForEach-Object { (Get-FileHash -Path @('multimonitortool.zip', 'multimonitortool-x64.zip') -Algorithm $_).Hash.ToLower() }
+
+This block should be executed against independently downloaded archives, as well as the copies
+distributed with the package. All of the calculated hash values should match the published checksums.
+Matching hash values should confirm that the published checksums are valid, and that no corruption or
+tampering has occurred during this package's generation process.
