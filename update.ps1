@@ -29,13 +29,15 @@ function Add-ArchivedUrls {
     $downloadUrl = "https://web.archive.org/save/$($Latest.Url32)"
     Write-Host "Starting Selenium at $downloadUrl"
     $seleniumDriver = Start-SeFirefox $downloadUrl -Headless
-    $Latest.ArchivedDownloadURL32 = $seleniumDriver.Url    
+    $Latest.ArchivedDownloadURL32 = $seleniumDriver.Url
+    $Latest.DirectArchivedDownloadURL32 = $Latest.ArchivedDownloadURL32.Replace("/$($Latest.Url32)", "if_/$($Latest.Url32)")
     $seleniumDriver.Dispose()
 
     $downloadUrl = "https://web.archive.org/save/$($Latest.Url64)"
     Write-Host "Starting Selenium at $downloadUrl"
     $seleniumDriver = Start-SeFirefox $downloadUrl -Headless
-    $Latest.ArchivedDownloadURL64 = $seleniumDriver.Url    
+    $Latest.ArchivedDownloadURL64 = $seleniumDriver.Url
+    $Latest.DirectArchivedDownloadURL64 = $Latest.ArchivedDownloadURL64.Replace("/$($Latest.Url64)", "if_/$($Latest.Url64)")
     $seleniumDriver.Dispose()
 }
 
@@ -100,8 +102,8 @@ function global:au_AfterUpdate ($Package)  {
 function global:au_SearchReplace {
     @{
         'build.ps1' = @{
-            '(^\s*Url32\s*=\s*)(''.*'')' = "`$1'$($Latest.ArchivedDownloadURL32)'"
-            '(^\s*Url64\s*=\s*)(''.*'')' = "`$1'$($Latest.ArchivedDownloadURL64)'"
+            '(^\s*Url32\s*=\s*)(''.*'')' = "`$1'$($Latest.DirectArchivedDownloadURL32)'"
+            '(^\s*Url64\s*=\s*)(''.*'')' = "`$1'$($Latest.DirectArchivedDownloadURL64)'"
         }
         "$($Latest.PackageName).nuspec" = @{
             "(<packageSourceUrl>)[^<]*(</packageSourceUrl>)" = "`$1https://github.com/brogers5/chocolatey-package-$($Latest.PackageName)/tree/v$($Latest.Version)`$2"

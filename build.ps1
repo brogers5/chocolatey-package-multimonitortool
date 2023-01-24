@@ -6,8 +6,8 @@ $nuspecFileRelativePath = Join-Path -Path $currentPath -ChildPath 'multimonitort
 $version = [Version] $nuspec.package.metadata.version
 
 $global:Latest = @{
-    Url32 = 'https://web.archive.org/web/20230124022629/https://www.nirsoft.net/utils/multimonitortool.zip'
-    Url64 = 'https://web.archive.org/web/20230124022650/https://www.nirsoft.net/utils/multimonitortool-x64.zip'
+    Url32 = 'https://web.archive.org/web/20230124022629if_/https://www.nirsoft.net/utils/multimonitortool.zip'
+    Url64 = 'https://web.archive.org/web/20230124022650if_/https://www.nirsoft.net/utils/multimonitortool-x64.zip'
     Version = $version
 }
 
