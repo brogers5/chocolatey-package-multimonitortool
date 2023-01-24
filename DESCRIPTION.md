@@ -17,3 +17,4 @@ MultiMonitorTool also provides a preview window, which allows you to watch a pre
 
 * `/NoDesktopShortcut` - Opt out of creating a Desktop shortcut.
 * `/NoProgramsShortcut` - Opt out of creating a Programs shortcut in your Start Menu.
+* `/Start` - Automatically start MultiMonitorTool after installation completes.

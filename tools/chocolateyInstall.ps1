@@ -41,3 +41,15 @@ if (!$pp.NoProgramsShortcut)
     $shortcutFilePath = Join-Path -Path $programsDirectory -ChildPath $linkName
     Install-ChocolateyShortcut -ShortcutFilePath $shortcutFilePath -TargetPath $targetPath -ErrorAction SilentlyContinue
 }
+
+if ($pp.Start)
+{
+  try
+  {
+    Start-Process -FilePath $targetPath -ErrorAction Continue
+  }
+  catch
+  {
+    Write-Warning "$softwareName failed to start, please try to manually start it instead."
+  }
+}
