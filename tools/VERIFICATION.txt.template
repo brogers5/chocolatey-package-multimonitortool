@@ -45,8 +45,15 @@ For tamper protection, it's recommended to validate against either a SHA256 or S
 
 The following PowerShell block will calculate and print a hash for each supported algorithm:
 
+    $filePaths = @('multimonitortool.zip', 'multimonitortool-x64.zip')
     $hashAlgorithms = @('MD5', 'SHA1', 'SHA256', 'SHA512')
-    $hashAlgorithms | ForEach-Object { (Get-FileHash -Path @('multimonitortool.zip', 'multimonitortool-x64.zip') -Algorithm $_).Hash.ToLower() }
+    foreach ($filePath in $filePaths)
+    {
+        foreach ($hashAlgorithm in $hashAlgorithms)
+        {
+            (Get-FileHash -Path $filePath -Algorithm $hashAlgorithm).Hash.ToLower()
+        }
+    }
 
 This block should be executed against independently downloaded archives, as well as the copies
 distributed with the package. All of the calculated hash values should match the published checksums.
