@@ -15,6 +15,7 @@ MultiMonitorTool also provides a preview window, which allows you to watch a pre
 
 ## Package Parameters
 
+* `/NoShim` - Opt out of creating a GUI shim.
 * `/NoDesktopShortcut` - Opt out of creating a Desktop shortcut.
 * `/NoProgramsShortcut` - Opt out of creating a Programs shortcut in your Start Menu.
 * `/Start` - Automatically start MultiMonitorTool after installation completes.
