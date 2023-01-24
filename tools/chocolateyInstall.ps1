@@ -8,7 +8,6 @@ $url64 = 'https://www.nirsoft.net/utils/multimonitortool-x64.zip'
 $checksum64 = '2cf23f292ed38c946a8c7e1b904f89d3f6af9d3a5ecb43cef681bb07a3702715'
 $checksumType64 = 'sha256'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$installFile = Join-Path $toolsDir "$($packageName).exe"
 
 Install-ChocolateyZipPackage -PackageName "$packageName" `
                              -Url "$url" `
@@ -19,5 +18,26 @@ Install-ChocolateyZipPackage -PackageName "$packageName" `
                              -Checksum64 "$checksum64" `
                              -ChecksumType64 "$checksumType64"
 
-Set-Content -Path ("$installFile.gui") `
+$softwareName = 'MultiMonitorTool'
+$binaryFileName = "$softwareName.exe"
+$linkName = "$softwareName.lnk"
+$targetPath = Join-Path -Path $toolsDir -ChildPath $binaryFileName
+
+Set-Content -Path ("$targetPath.gui") `
             -Value $null
+
+$pp = Get-PackageParameters
+
+if (!$pp.NoDesktopShortcut)
+{
+    $desktopDirectory = [Environment]::GetFolderPath([Environment+SpecialFolder]::DesktopDirectory)
+    $shortcutFilePath = Join-Path -Path $desktopDirectory -ChildPath $linkName
+    Install-ChocolateyShortcut -ShortcutFilePath $shortcutFilePath -TargetPath $targetPath -ErrorAction SilentlyContinue
+}
+
+if (!$pp.NoProgramsShortcut)
+{
+    $programsDirectory = [Environment]::GetFolderPath([Environment+SpecialFolder]::Programs)
+    $shortcutFilePath = Join-Path -Path $programsDirectory -ChildPath $linkName
+    Install-ChocolateyShortcut -ShortcutFilePath $shortcutFilePath -TargetPath $targetPath -ErrorAction SilentlyContinue
+}
