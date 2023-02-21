@@ -30,14 +30,14 @@ function Add-ArchivedUrls {
     Write-Host "Starting Selenium at $downloadUrl"
     $seleniumDriver = Start-SeFirefox $downloadUrl -Headless
     $Latest.ArchivedDownloadURL32 = $seleniumDriver.Url
-    $Latest.DirectArchivedDownloadURL32 = $Latest.ArchivedDownloadURL32.Replace("/$($Latest.Url32)", "if_/$($Latest.Url32)")
+    $Latest.DirectArchivedDownloadURL32 = $Latest.ArchivedDownloadURL32 -replace '(\d{14})/',"`$1if_/"
     $seleniumDriver.Dispose()
 
     $downloadUrl = "https://web.archive.org/save/$($Latest.Url64)"
     Write-Host "Starting Selenium at $downloadUrl"
     $seleniumDriver = Start-SeFirefox $downloadUrl -Headless
     $Latest.ArchivedDownloadURL64 = $seleniumDriver.Url
-    $Latest.DirectArchivedDownloadURL64 = $Latest.ArchivedDownloadURL64.Replace("/$($Latest.Url64)", "if_/$($Latest.Url64)")
+    $Latest.DirectArchivedDownloadURL64 = $Latest.ArchivedDownloadURL64 -replace '(\d{14})/',"`$1if_/"
     $seleniumDriver.Dispose()
 }
 
