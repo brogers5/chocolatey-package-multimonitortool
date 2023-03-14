@@ -22,23 +22,23 @@ As a workaround, this package's creation process includes the creation of histor
 the Internet Archive's Wayback Machine to create a permanent backup source.
 These snapshots can be accessed at the following URLs:
 
-Download (32-bit): https://web.archive.org/web/20230221040619/https://www.nirsoft.net/utils/multimonitortool.zip
-Download (64-bit): https://web.archive.org/web/20230221040641/https://www.nirsoft.net/utils/multimonitortool-x64.zip
-Checksums: https://web.archive.org/web/20230221040438/https://www.nirsoft.net/hash_check/?software=multimonitortool
+Download (32-bit): https://web.archive.org/web/20230314021530/https://www.nirsoft.net/utils/multimonitortool.zip
+Download (64-bit): https://web.archive.org/web/20230314021551/https://www.nirsoft.net/utils/multimonitortool-x64.zip
+Checksums: https://web.archive.org/web/20230314020123/https://www.nirsoft.net/hash_check/?software=multimonitortool
 
 For convenience, the following checksums were published at the time of this package's creation:
 
 multimonitortool.zip
-MD5: b7beb159e665e8dee178cdd6541e729b
-SHA1: c115a5a157799dcef77d1a6a08988ce364f908ae
-SHA256: d179316a884bfb46f36891404ddd671f79e637913cf484ee938710cbe58fce13
-SHA512: 5cbbff5e38101a9b9b44f135534fcec7f968831d1e8375992a40ae34f368fd5327b27db0c739a004f3256c52a733cfec7171e744e74cf9f3fc06e24f53d7ec51
+MD5: c5679b4e352564763be130bff9135740
+SHA1: bead13df392e4058da91aa37ae54e681f9ace16d
+SHA256: a4c9876e96f0b92665ff514410a2aa06c5cf6e47af2e4dd00bbfb51f2324cf99
+SHA512: 07b31aa1afa066586f07e74fc20e64ee3e8e9cff260d70e877e99bbcbfe80d242630e361ff4b5743189ac9b6d53a8f9a9357abbdb909673b735d052f5540ab5e
 
 multimonitortool-x64.zip
-MD5: 8c1d891e6b326b2d22c26fad29d2bf09
-SHA1: 09b115ad1dcb043303a4f4f7600c17972cde4ed2
-SHA256: 8fba969634cc84913023144ee7203fe9f97f3158a079ae2be9b83706bd6b6bc7
-SHA512: 2a1c3b3b9948cd42be1b3684c63b6346bbb045df430b4139c9a96e014d0c1eeb5ba6fff8ca25a1b2ac489108e6861b70fccce87d8cfcd07998c2cd56ffbb48de
+MD5: cfb139f8b4bf0be0f01becc01733bfbd
+SHA1: 5ae2dcd5b8449a7213239ccce007f8377f50181c
+SHA256: a3d6e77f1af065b5c5446a3b302d9cf6bb37490c88e358867f6b7aa759b66398
+SHA512: c93199a32accde20b18e773b7da6a7a931a1264e658a9c0ecc2cfc44f447644c00d1501ed7d8959c8ae6d3e52082fc5f304e557007e26bc09ac3245c2e5f21e0
 
 Note that the MD5 and SHA1 hash algorithms are no longer considered secure by modern standards.
 For tamper protection, it's recommended to validate against either a SHA256 or SHA512 hash instead.
