@@ -7,8 +7,8 @@
     <title>MultiMonitorTool</title>
     <authors>Nir Sofer</authors>
     <owners>dtgm sublym0nal</owners>
-    <licenseUrl>http://www.nirsoft.net/utils/multi_monitor_tool.html</licenseUrl>
-    <projectUrl>http://www.nirsoft.net/utils/multi_monitor_tool.html</projectUrl>
+    <licenseUrl>https://www.nirsoft.net/utils/multi_monitor_tool.html</licenseUrl>
+    <projectUrl>https://www.nirsoft.net/utils/multi_monitor_tool.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-multimonitortool@f92d7f6582ba2047f4b089a2ed5da97741c3163e/multimonitortool.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
