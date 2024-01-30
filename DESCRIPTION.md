@@ -1,12 +1,3 @@
-
----
-
-### [choco://multimonitortool](choco://multimonitortool)
-
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support](https://community.chocolatey.org/packages/choco-protocol-support)
-
----
-
 ## MultiMonitorTool
 
 MultiMonitorTool is a small tool that allows you to do some actions related to working with multiple monitors.
