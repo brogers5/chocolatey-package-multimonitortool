@@ -10,7 +10,7 @@ $userAgent = 'Update checker of Chocolatey Community Package ''multimonitortool'
 function Add-ArchivedUrls {
     $seleniumModuleName = 'Selenium'
     if (!(Get-Module -ListAvailable -Name $seleniumModuleName)) {
-        Install-Module -Name $seleniumModuleName
+        Install-Module -Name $seleniumModuleName -AllowPrerelease
     }
     Import-Module $seleniumModuleName
 
