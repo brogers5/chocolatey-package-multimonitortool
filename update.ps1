@@ -5,7 +5,7 @@ $toolsPath = Join-Path -Path $currentPath -ChildPath 'tools'
 
 $projectUri = 'https://www.nirsoft.net/utils/multi_monitor_tool.html'
 $checksumsUrl = 'https://www.nirsoft.net/hash_check/?software=multimonitortool'
-$userAgent = 'UUpdate checker of Chocolatey Community Package ''multimonitortool'''
+$userAgent = 'Update checker of Chocolatey Community Package ''multimonitortool'''
 
 function Add-ArchivedUrls {
     $seleniumModuleName = 'Selenium'
