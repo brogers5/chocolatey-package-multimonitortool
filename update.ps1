@@ -9,14 +9,12 @@ $userAgent = 'UUpdate checker of Chocolatey Community Package ''multimonitortool
 
 function Add-ArchivedUrls {
     $seleniumModuleName = 'Selenium'
-    if (!(Get-Module -ListAvailable -Name $seleniumModuleName))
-    {
+    if (!(Get-Module -ListAvailable -Name $seleniumModuleName)) {
         Install-Module -Name $seleniumModuleName
     }
     Import-Module $seleniumModuleName
 
-    if (!(Test-Path -Path "$env:PROGRAMFILES\Mozilla Firefox\firefox.exe"))
-    {
+    if (!(Test-Path -Path "$env:PROGRAMFILES\Mozilla Firefox\firefox.exe")) {
         choco install firefox -y
     }
 
@@ -30,14 +28,14 @@ function Add-ArchivedUrls {
     Write-Output "Starting Selenium at $downloadUrl"
     $seleniumDriver = Start-SeFirefox $downloadUrl -Headless
     $Latest.ArchivedDownloadURL32 = $seleniumDriver.Url
-    $Latest.DirectArchivedDownloadURL32 = $Latest.ArchivedDownloadURL32 -replace '(\d{14})/',"`$1if_/"
+    $Latest.DirectArchivedDownloadURL32 = $Latest.ArchivedDownloadURL32 -replace '(\d{14})/', "`$1if_/"
     $seleniumDriver.Dispose()
 
     $downloadUrl = "https://web.archive.org/save/$($Latest.Url64)"
     Write-Output "Starting Selenium at $downloadUrl"
     $seleniumDriver = Start-SeFirefox $downloadUrl -Headless
     $Latest.ArchivedDownloadURL64 = $seleniumDriver.Url
-    $Latest.DirectArchivedDownloadURL64 = $Latest.ArchivedDownloadURL64 -replace '(\d{14})/',"`$1if_/"
+    $Latest.DirectArchivedDownloadURL64 = $Latest.ArchivedDownloadURL64 -replace '(\d{14})/', "`$1if_/"
     $seleniumDriver.Dispose()
 }
 
@@ -57,8 +55,7 @@ function Read-ExpectedChecksums {
 
 function Confirm-Checksum($FilePath, $Algorithm, $ExpectedHash) {
     $hash = (Get-FileHash -Path $FilePath -Algorithm $Algorithm).Hash
-    if ($ExpectedHash -ne $hash)
-    {
+    if ($ExpectedHash -ne $hash) {
         throw "$Algorithm checksum mismatch! Expected '$ExpectedHash', actual is '$hash'"
     }
 }
@@ -90,7 +87,7 @@ function global:au_BeforeUpdate ($Package) {
     Set-DescriptionFromReadme -Package $Package -ReadmePath '.\DESCRIPTION.md'
 }
 
-function global:au_AfterUpdate ($Package)  {
+function global:au_AfterUpdate ($Package) {
     $rawLicense = [Regex]::Matches($response.Content, '<h4 class="utilsubject">License<\/h4>\n((.*\n){1,6})').Groups[1].Value
     $processedLicense = $rawLicense.Replace("`n", "`r`n")
     $rawDisclaimer = [Regex]::Matches($response.Content, '<h4 class="utilsubject">Disclaimer<\/h4>\n((.*\n){1,4})').Groups[1].Value
@@ -101,26 +98,26 @@ function global:au_AfterUpdate ($Package)  {
 
 function global:au_SearchReplace {
     @{
-        'build.ps1' = @{
+        'build.ps1'                     = @{
             '(^\s*Url32\s*=\s*)(''.*'')' = "`$1'$($Latest.DirectArchivedDownloadURL32)'"
             '(^\s*Url64\s*=\s*)(''.*'')' = "`$1'$($Latest.DirectArchivedDownloadURL64)'"
         }
         "$($Latest.PackageName).nuspec" = @{
-            "(<packageSourceUrl>)[^<]*(</packageSourceUrl>)" = "`$1https://github.com/brogers5/chocolatey-package-$($Latest.PackageName)/tree/v$($Latest.Version)`$2"
-            "(<copyright>)[^<]*(</copyright>)" = "`$1Copyright (c) 2012-$(Get-Date -Format yyyy) Nir Sofer`$2"
+            '(<packageSourceUrl>)[^<]*(</packageSourceUrl>)' = "`$1https://github.com/brogers5/chocolatey-package-$($Latest.PackageName)/tree/v$($Latest.Version)`$2"
+            '(<copyright>)[^<]*(</copyright>)'               = "`$1Copyright (c) 2012-$(Get-Date -Format yyyy) Nir Sofer`$2"
         }
-        'tools\VERIFICATION.txt' = @{
+        'tools\VERIFICATION.txt'        = @{
             '%archivedDownloadUrl32%' = "$($Latest.ArchivedDownloadURL32)"
             '%archivedDownloadUrl64%' = "$($Latest.ArchivedDownloadURL64)"
-            '%archivedChecksumsUrl%' = "$($Latest.ArchivedChecksumsURL)"
-            '%md5Hash32%' = "$($Latest.Expected32ChecksumMD5)"
-            '%sha1Hash32%' = "$($Latest.Expected32ChecksumSHA1)"
-            '%sha256Hash32%' = "$($Latest.Expected32ChecksumSHA256)"
-            '%sha512Hash32%' = "$($Latest.Expected32ChecksumSHA512)"
-            '%md5Hash64%' = "$($Latest.Expected64ChecksumMD5)"
-            '%sha1Hash64%' = "$($Latest.Expected64ChecksumSHA1)"
-            '%sha256Hash64%' = "$($Latest.Expected64ChecksumSHA256)"
-            '%sha512Hash64%' = "$($Latest.Expected64ChecksumSHA512)"
+            '%archivedChecksumsUrl%'  = "$($Latest.ArchivedChecksumsURL)"
+            '%md5Hash32%'             = "$($Latest.Expected32ChecksumMD5)"
+            '%sha1Hash32%'            = "$($Latest.Expected32ChecksumSHA1)"
+            '%sha256Hash32%'          = "$($Latest.Expected32ChecksumSHA256)"
+            '%sha512Hash32%'          = "$($Latest.Expected32ChecksumSHA512)"
+            '%md5Hash64%'             = "$($Latest.Expected64ChecksumMD5)"
+            '%sha1Hash64%'            = "$($Latest.Expected64ChecksumSHA1)"
+            '%sha256Hash64%'          = "$($Latest.Expected64ChecksumSHA256)"
+            '%sha512Hash64%'          = "$($Latest.Expected64ChecksumSHA512)"
         }
     }
 }
@@ -131,9 +128,9 @@ function global:au_GetLatest {
     $version = [Regex]::Matches($response.Content, '<td>MultiMonitorTool v(\d+(\.\d+){1,3})').Groups[1].Value
 
     return @{ 
-        Url32 = 'https://www.nirsoft.net/utils/multimonitortool.zip'
-        Url64 = 'https://www.nirsoft.net/utils/multimonitortool-x64.zip'
-        Version = $version
+        Url32           = 'https://www.nirsoft.net/utils/multimonitortool.zip'
+        Url64           = 'https://www.nirsoft.net/utils/multimonitortool-x64.zip'
+        Version         = $version
         SoftwareVersion = $Version #This may change if building a package fix version
     }
 }
