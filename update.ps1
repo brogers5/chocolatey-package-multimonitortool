@@ -130,8 +130,7 @@ function global:au_GetLatest {
     return @{ 
         Url32           = 'https://www.nirsoft.net/utils/multimonitortool.zip'
         Url64           = 'https://www.nirsoft.net/utils/multimonitortool-x64.zip'
-        Version         = $version
-        SoftwareVersion = $Version #This may change if building a package fix version
+        Version         = "$version" #This may change if building a package fix version
     }
 }
 
